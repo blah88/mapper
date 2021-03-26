@@ -2,20 +2,26 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from os import path
 from flask_login import LoginManager
+from flask_bcrypt import Bcrypt
 
+bcrypt = Bcrypt()
 db = SQLAlchemy()
-DB_NAME = "database.db"
 
+DB_NAME = "mapper"
 
 def create_app():
     app = Flask(__name__)
-    app.config['SECRET_KEY'] = 'hjshjhdjah kjshkjdhjs'
-    app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS']    = False
+    app.config['SECRET_KEY'] = 'duck'
+    app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://postgres:Trello1?@mapper.c9nhahuxgile.ap-southeast-2.rds.amazonaws.com:5432/{DB_NAME}'
     db.init_app(app)
 
     from .views import views
     from .auth import auth
 
+    from commands import db_commands
+    app.register_blueprint(db_commands)
+    
     app.register_blueprint(views, url_prefix='/')
     app.register_blueprint(auth, url_prefix='/')
 
