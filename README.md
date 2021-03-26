@@ -23,8 +23,8 @@ python main.py
 Go to `http://127.0.0.1:5000`
 
 
-https://cccmapper.herokuapp.com/
-https://github.com/blah88/mapper
+https://limitless-scrubland-15817.herokuapp.com/
+https://github.com/blah88/mapper2
 
 Disclaimer: The entirety of the content below are subject to change. The app name, purpose, tech stack, dataflow logic, wireframes and user stories may be different in the final stage.  
 <br>
