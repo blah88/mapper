@@ -12,8 +12,6 @@ DB_NAME = "mapper"
 
 def create_app():
 
-
-    
     app = Flask(__name__)
     
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS']    = False

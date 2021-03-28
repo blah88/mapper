@@ -5,7 +5,7 @@
 Make sure you have the latest version of Python installed.
 
 ```bash
-git clone <repo-url>
+git clone git@github.com:blah88/mapper2.git
 ```
 
 ```bash
@@ -15,15 +15,24 @@ pip install -r requirements.txt
 ## Running The App
 
 ```bash
-python3 -m flask run -h 0.0.0.0
+development:
+python main.py
+```
+
+```bash
+production:
+screen -m -d sudo python3 -m flask run -h 0.0.0.0
 ```
 
 ## Viewing The App
-
+For locally installed, 
 Go to `http://127.0.0.1:5000`
 
-
-https://limitless-scrubland-15817.herokuapp.com/
+<br>
+For production environment
+http://ec2-3-25-105-203.ap-southeast-2.compute.amazonaws.com:5000/
+<br>
+Github Page:
 https://github.com/blah88/mapper2
 
 Disclaimer: The entirety of the content below are subject to change. The app name, purpose, tech stack, dataflow logic, wireframes and user stories may be different in the final stage.  
