@@ -15,7 +15,7 @@ pip install -r requirements.txt
 ## Running The App
 
 ```bash
-python main.py
+python3 -m flask run -h 0.0.0.0
 ```
 
 ## Viewing The App

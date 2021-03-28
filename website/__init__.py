@@ -11,7 +11,11 @@ db = SQLAlchemy()
 DB_NAME = "mapper"
 
 def create_app():
+
+
+    
     app = Flask(__name__)
+    
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS']    = False
     app.config['SECRET_KEY'] = 'duck'
     app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://postgres:Trello1?@mapper.c9nhahuxgile.ap-southeast-2.rds.amazonaws.com:5432/{DB_NAME}'
