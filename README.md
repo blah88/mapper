@@ -5,7 +5,7 @@
 Make sure you have the latest version of Python installed.
 
 ```bash
-git clone git@github.com:blah88/mapper2.git
+git clone git@github.com:blah88/mapper.git
 ```
 
 ```bash
@@ -33,7 +33,7 @@ For production environment
 http://ec2-3-25-105-203.ap-southeast-2.compute.amazonaws.com:5000/
 <br>
 Github Page:
-https://github.com/blah88/mapper2
+https://github.com/blah88/mapper
 
 Disclaimer: The entirety of the content below are subject to change. The app name, purpose, tech stack, dataflow logic, wireframes and user stories may be different in the final stage.  
 <br>
