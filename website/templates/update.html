@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content%}
+<h1 align="center">Update a Board</h1>
+
+<div class="form-outline">
+    <input type="text" name = "board.title" id="board.title" class="form-control" />
+    <label class="form-label" for="board.title">Enter Title</label>
+  </div>
+
+ <br>
+  <textarea name="board.content" id="board.content" class="form-control"></textarea>
+  <label class="form-label" for="board.content">Enter Content</label>
+
+  <br />
+  <div align="center">
+    <button type="submit" class="btn btn-primary">Add Board</button>
+  </div>
+</form>
+
+{% endblock %}

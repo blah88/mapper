@@ -1,20 +1,73 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {% block content%}
-<h1 align="center">Notes</h1>
-<ul class="list-group list-group-flush" id="notes">
-  {% for note in user.notes %}
-  <li class="list-group-item">
-    {{ note.data }}
-    <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+<h1 align="center">Boards</h1>
+<ul class="list-group list-group-flush" id="boards">
+  {% for board in user.boards %}
+  <!-- <li class="list-group-item"> -->
+    <!-- {{ board.content }}
+    <button type="button" class="close" onClick="deleteBoard({{ board.id }})">
       <span aria-hidden="true">&times;</span>
-    </button>
+    </button> -->
+
+    <div class="col px-md-5"><div class="p-3 border bg-light">
+      <div class="card" >
+          <div class="card-body">
+              <h5 class="card-title">{{board.title}}</h5>
+              <!--<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+              {{board.content}}
+              <a href="#" class="card-link">Card link</a>
+          </div>
+          <!-- <button type="button" class="close" onClick="deleteBoard({{ board.id }})"> -->
+          <button type="submit" class="btn btn-primary" onClick="deleteBoard({{ board.id }})">Delete Board</button>
+
+
+      </div>
+  </div
+  >
+</div>
+
+
+
   </li>
   {% endfor %}
 </ul>
 <form method="POST">
-  <textarea name="note" id="note" class="form-control"></textarea>
+  
+<br>
+
+  <!-- <textarea name="board.title" id="board.title" class="form-control"></textarea> -->
+
+  <div class="form-outline">
+    <input type="text" name = "board.title" id="board.title" class="form-control" />
+    <label class="form-label" for="board.title">Enter Title</label>
+  </div>
+
+ <br>
+  <textarea name="board.content" id="board.content" class="form-control">Test1</textarea>
+  <label class="form-label" for="board.content">Enter Content</label>
+
   <br />
   <div align="center">
-    <button type="submit" class="btn btn-primary">Add Note</button>
+    <button type="submit" class="btn btn-primary">Add Board</button>
   </div>
 </form>
+
 {% endblock %}
+
+
+
+<!-- {% for board in boards %}
+<div class="col px-md-5"><div class="p-3 border bg-light">
+            <div class="card" >
+                <div class="card-body">
+                    <h5 class="card-title">{{board.title}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                    <!-- {{board.content}}
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
+</div>
+{% endfor %} --> 
